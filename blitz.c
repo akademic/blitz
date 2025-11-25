@@ -42,7 +42,6 @@
 #include <fcntl.h>
 
 #ifdef BLITZ_DEBUG
-#include "ext/standard/php_smart_string.h"
 #include "zend_smart_str.h"
 #endif
 
