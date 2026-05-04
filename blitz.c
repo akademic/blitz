@@ -323,7 +323,7 @@ static void blitz_error (blitz_tpl *tpl, unsigned int level, char *format, ...) 
     php_error_docref(NULL, level, "%s", msg);
 
     if (BLITZ_G(throw_exceptions) && level == E_WARNING) {
-        zend_throw_exception_ex(zend_exception_get_default(), 0, "%s", msg);
+        zend_throw_exception_ex(zend_ce_exception, 0, "%s", msg);
     }
 
     if (free_msg) {
